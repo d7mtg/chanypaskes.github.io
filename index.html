@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +6,6 @@
     <meta name="theme-color" content="#000000">
     <title>Chany Paskes</title>
     <script src="typewriter.js"></script>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -17,11 +15,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/png" href="favicon.ico">
-
     <link rel="manifest" href="site.webmanifest">
-
 </head>
-
 <body>
     <div class="nav">
         <img src="logo.png" alt="" class="logo">
@@ -36,34 +31,25 @@
             speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
     </div> -->
     <div id="center_text">
-
-    </div>
-
-
+    </div> 
 
     <p class="admit_it">
         Admit it: <br>
         <span class="bold">Lighting a fire is a thrill.</span>
     </p>
-
     <p class="all_caps_small">(And not just for little boys.)</p>
-
     <button class="wide_button" onclick="alert('hello')"> That’s why you're gonna click this now.</button>
-
     <div class="footer">
         <img class="logo_footer" src="widelogo.png" alt="">
         <p class="footer_text">COPYRIGHT 2022 • CHANY PASKES COPY </p>
     </div>
     <script>
         var center_text = document.getElementById('center_text');
-
         var typewriter = new Typewriter(center_text, {
-
             delay: 35,
             cursor: '',
             autoStart: true,
             deleteSpeed: 0
-
         });
         typewriter
             .deleteAll()
@@ -122,12 +108,8 @@
             .pauseFor(2200)
             .deleteChars(1)
             .typeString('<div class="line line center_small orange" > The burner it\'s on is waaay back. </div>')
-           
-
             .start();
     </script>
 
-
 </body>
-
 </html>
