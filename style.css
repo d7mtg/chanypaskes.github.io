@@ -508,10 +508,9 @@ form {
 /* change all scroll  */
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 3px;
 }
 ::-webkit-scrollbar-track {
-    width: 1px;
     background: #202020;
 }
 ::-webkit-scrollbar-thumb {
