@@ -463,4 +463,16 @@ form {
     #center_text {
        min-height: 400px;
     }
+    #input_name,
+    #input_email,
+    #input_subject {
+        width: 100%;
+    }
+    .popup_body{
+        width: calc(100% - 80px);
+        height: 500px;
+        overflow-x: scroll;
+    }
+    
+
 }
