@@ -21,18 +21,17 @@
     <script src="https://kit.fontawesome.com/7b42fedff3.js" crossorigin="anonymous"></script>
     <link rel="preload" href="fonts/Roobert-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/Roobert-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
-   
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("4e5Lyx3pm95tMNkdC");
         })();
-
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            
-            document.getElementById('contact_form').addEventListener('submit', function(event) {
+        window.onload = function () {
+
+            document.getElementById('contact_form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 document.getElementById('popup_button').value = '';
                 //select .submit_lottie
@@ -41,23 +40,21 @@
                 //disable button
                 document.getElementById('popup_button').disabled = true;
                 document.getElementById('popup_button').style.cursor = 'not-allowed';
-
-
-
-                emailjs.sendForm("service_ihct12f","template_ptodhqn", this)
-                    .then(function() {
-                document.querySelector('.submit_lottie').style.display = 'none';
-//clear all fields id="input_name" id="input_email" id="input_subject"> id="input_message"
+                emailjs.sendForm("service_ihct12f", "template_ptodhqn", this)
+                    .then(function () {
+                        document.querySelector('.submit_lottie').style.display = 'none';
                         document.getElementById('input_name').value = '';
+                        document.getElementById('input_name').disabled = true;
                         document.getElementById('input_email').value = '';
+                        document.getElementById('input_email').disabled = true;
                         document.getElementById('input_subject').value = '';
+                        document.getElementById('input_subject').disabled = true;
                         document.getElementById('input_message').value = '';
-                        document.getElementById('popup_button').value = 'THANKS FOR STRIKING THE MATCH. TALK SOON.';
-
-                        
-
-                    }, function(error) {
-                document.querySelector('.submit_lottie').style.display = 'none';
+                        document.getElementById('input_message').disabled = true;
+                        document.getElementById('popup_button').value =
+                            'THANKS FOR STRIKING THE MATCH. TALK SOON.';
+                    }, function (error) {
+                        document.querySelector('.submit_lottie').style.display = 'none';
 
                         document.getElementById('popup_button').value = 'Error! Please try again.';
 
@@ -90,7 +87,7 @@
     <p class="all_caps_small">(And not just for little boys.)</p>
     <button class="wide_button" onclick="openpopup()"> That's why you're gonna click this now.</button>
     <div class="footer">
-        <img class="logo_footer" src="widelogo.png" alt="">
+        <img class="logo_footer" src="widelogo.png" alt="Chany paskes logo">
         <p class="footer_text">COPYRIGHT <span id="year"></span> • CHANY PASKES COPY </p>
     </div>
 
@@ -98,7 +95,7 @@
 
         <div class="popup_header">
             <p class="popup_header_text">Confession:</p>
-            <span class="popup_close_button"  onclick="closepopup()">
+            <span class="popup_close_button" onclick="closepopup()">
                 <i class="fal fa-xmark"></i>
             </span>
         </div>
@@ -108,17 +105,20 @@
                 fire for my clients in the form of sizzling copy. <br> <br>
                 Agreed, the fire metaphor thing's getting kinda old. Burnt.<br> <br><br>
                 <span class="thinline"></span>
-               <span class="popup_body_text_large"> So, you ready to fire it up? Give a holler. </span><br> <br>
+                <span class="popup_body_text_large"> So, you ready to fire it up? Give a holler. </span><br> <br>
                 <span class="popup_body_text_small"> A whisper works too.</span>
             </p>
             <form id="contact_form" action="">
-                <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name" required>
-                <input placeholder="Best place to spam you? (nah...)" type="email" name="reply_to" class="popup_input" id="input_email" required>
+                <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name"
+                    required>
+                <input placeholder="Best place to spam you? (nah...)" type="email" name="reply_to" class="popup_input"
+                    id="input_email" required>
                 <input placeholder="What brings you?" type="text" name="subject" class="popup_input" id="input_subject">
-                <textarea placeholder="Here's where you spill your guts." name="message" class="popup_input popup_textarea"
-                    id="input_message"></textarea>
+                <textarea placeholder="Here's where you spill your guts." name="message"
+                    class="popup_input popup_textarea" id="input_message"></textarea>
                 <input class="popup_button" type="submit" value="Send" id="popup_button">
-                <lottie-player class="submit_lottie" src="https://assets9.lottiefiles.com/packages/lf20_ean9shke.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
+                <lottie-player class="submit_lottie" src="https://assets9.lottiefiles.com/packages/lf20_ean9shke.json"
+                    background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
 
             </form>
         </div>
@@ -126,7 +126,7 @@
     <div id="dark_overlay"></div>
     <script>
         console.log("Hey! This website was created by https://d7m.tg/");
-        
+
 
 
 
@@ -149,41 +149,41 @@
             .pauseFor(1500)
             .deleteChars(1)
             .typeString('<div class="line center_large">  Yes, you\'re in the right place. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> And a tad disappointed. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> \'Cause you expected some fiery copy. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_large orange"> I know. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> And believe me, when it comes it\'ll blaze. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> So hang in there. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> \'Cause good things come to those who wait. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_large "> At your own risk, though. </div>')
-            
+
             .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line line center_small orange" > The burner it\'s on is waaay back. </div>')
             .start();
 
-         function openpopup() {
+        function openpopup() {
             document.getElementById('popup_container').classList.remove('hidden');
             document.getElementById('popup_container').classList.add('visible');
             document.getElementById('dark_overlay').style.display = 'block';

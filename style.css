@@ -12,7 +12,6 @@ html {
 
 
 
-
 @keyframes movebackground {
     0% {
         background-position: 0% 50%;
@@ -270,7 +269,7 @@ lottie-player {
     border-radius: 10px 10px 0px 0px;
     padding-left: 35px;
     padding-right: 35px;
-    box-shadow:  rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
 }
 
@@ -324,7 +323,7 @@ lottie-player {
     padding-top: 25px;
 }
 
-.thinline{
+.thinline {
     border-top: 1px solid #4e4e4ea9;
     height: 25px;
     width: 100%;
@@ -335,11 +334,13 @@ lottie-player {
 .popup_body_text_small {
     font-size: 10px;
     letter-spacing: 0.13em;
-    
+
 }
-.popup_body_text_large{
+
+.popup_body_text_large {
     font-size: 18px;
 }
+
 form {
     overflow: hidden;
 }
@@ -361,15 +362,17 @@ form {
     padding-right: 10px;
     border-radius: 5px;
     line-height: 25px;
-    
+    transition: all 0.1s ease-in-out;
+
 }
+
 ::placeholder {
     color: #9A9A9A;
 
 }
 
 
-  
+
 .popup_input:focus {
     border: 1px solid #EB5C27;
 
@@ -414,7 +417,7 @@ form {
 
 .submit_lottie {
     position: absolute;
-    bottom: 35px;   
+    bottom: 35px;
     right: 0px;
     left: 0px;
     margin: auto;
@@ -437,11 +440,12 @@ form {
     background: #EB5C27;
     border: 1px solid #EB5C27;
     /* outer shadow */
-    
+
 }
 
 /* screens 600 */
 @media screen and (max-width: 800px) {
+
     /*move  logo a bit down */
     .popup_button {
         height: 80px;
@@ -449,9 +453,10 @@ form {
         font-size: 13px;
         line-height: 20px;
         letter-spacing: 0.1em;
-        border-radius: 2px;
+        border-radius: 5px;
         white-space: normal;
-        }
+    }
+
     .logo {
 
         padding-top: 80px;
@@ -463,18 +468,20 @@ form {
         line-height: 71.5%;
         text-align: center;
     }
+
     .center_large {
         font-size: 24px;
         margin-bottom: 25px;
         margin-top: 25px;
         line-height: 25px;
     }
-    
+
     .center_small {
         font-size: 18px;
         margin-bottom: 10px;
         letter-spacing: 0.05em;
     }
+
     .wide_button {
         background: url(large-button.svg) no-repeat;
         background-size: 100% 100%;
@@ -492,25 +499,30 @@ form {
         text-transform: uppercase;
         cursor: pointer;
     }
+
     #center_text {
-       min-height: 400px;
+        min-height: 400px;
     }
+
     #input_name,
     #input_email,
     #input_subject {
         width: 100%;
     }
-    .popup_body{
+
+    .popup_body {
         width: calc(100% - 80px);
         max-height: 80vh;
         overflow-x: scroll;
     }
-    .submit_lottie{
+
+    .submit_lottie {
         position: relative;
         bottom: 70px;
     }
+
     html {
-     
+
         animation: none;
     }
 }
@@ -521,13 +533,16 @@ form {
 ::-webkit-scrollbar {
     width: 3px;
 }
+
 ::-webkit-scrollbar-track {
     background: #202020;
 }
+
 ::-webkit-scrollbar-thumb {
     /* orange */
     background: #EB5C27;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #EB5C27;
 
