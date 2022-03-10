@@ -18,6 +18,23 @@
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
     <script src="https://kit.fontawesome.com/7b42fedff3.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="fonts/Roobert-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roobert-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roobert-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roobert-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roobert-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roobert-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStRegular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStLight.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStBlack.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStBlack.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/BNBergenStMedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -89,15 +106,15 @@
             <p class="popup_body_text">
                 The real reason my website is still in the works (okay not yet in the works) is that I'm fueling the
                 fire for my clients in the form of sizzling copy. <br> <br>
-                (Agreed, the fire metaphor thing's getting kinda old. Burnt.) <br> <br>
+                Agreed, the fire metaphor thing's getting kinda old. Burnt.<br> <br>
                 So, you ready to fire it up? Give a holler. <br> <br>
                 <span class="popup_body_text_small"> A whisper works too.</span>
             </p>
             <form id="contact_form" action="">
-                <input placeholder="Your name" type="text" name="from_name" class="popup_input" id="input_name" required>
-                <input placeholder="Your email" type="email" name="reply_to" class="popup_input" id="input_email" required>
-                <input placeholder="Subject" type="text" name="subject" class="popup_input" id="input_subject">
-                <textarea placeholder="Your message" name="message" class="popup_input popup_textarea"
+                <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name" required>
+                <input placeholder="Best place to spam you? (nah...)" type="email" name="reply_to" class="popup_input" id="input_email" required>
+                <input placeholder="What brings you?" type="text" name="subject" class="popup_input" id="input_subject">
+                <textarea placeholder="Here's where to spill your guts." name="message" class="popup_input popup_textarea"
                     id="input_message"></textarea>
                 <input class="popup_button" type="submit" value="Send" id="popup_button">
                 <lottie-player class="submit_lottie" src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
@@ -116,59 +133,42 @@
         });
         typewriter
             .deleteAll()
-            .pauseFor(200)
             .typeString(
                 '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
             )
-            .pauseFor(2000)
+            .pauseFor(1500)
             .deleteChars(1)
             .typeString('<div class="line center_large">  Yes, you\'re in the right place. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1450)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> And a tad disappointed. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1200)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> \'Cause you expected some fiery copy. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(800)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_large orange"> I know. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1200)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> And believe me, when it comes it\'ll blaze. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1000)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> So hang in there. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1800)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_small"> \'Cause good things come to those who wait. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(1300)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line center_large "> At your own risk, though. </div>')
-            .typeString(
-                '<lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>'
-            )
-            .pauseFor(2200)
+            
+            .pauseFor(200)
             .deleteChars(1)
             .typeString('<div class="line line center_small orange" > The burner it\'s on is waaay back. </div>')
             .start();

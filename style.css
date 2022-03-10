@@ -68,7 +68,8 @@ h1 {
 }
 
 .center_small {
-    font-size: 14px;
+    font-size: 18px;
+
     margin-bottom: 10px;
     letter-spacing: 0.05em;
 }
@@ -183,7 +184,7 @@ lottie-player {
     max-width: 90%;
     height: auto;
     z-index: 9999;
-    background: #373737;
+    background: #202020;
     border-radius: 10px;
     top: 50%;
     left: 50%;
@@ -240,7 +241,7 @@ lottie-player {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     display: none;
     animation: revealbackground 0.5s ease-in-out;
 
@@ -260,7 +261,7 @@ lottie-player {
 
 .popup_header {
     height: 65px;
-    background: #4E4E4E;
+    background: #242424;
     margin-top: 0px;
     border-radius: 10px 10px 0px 0px;
     padding-left: 35px;
@@ -309,7 +310,7 @@ lottie-player {
     font-family: 'BN Bergen St';
     font-style: normal;
     font-weight: 100;
-    font-size: 12.7585px;
+    font-size: 14px;
     line-height: 104.5%;
     letter-spacing: 0.03em;
     color: #9A9A9A;
@@ -359,13 +360,10 @@ form {
 }
 
 #input_name,
-#input_email {
-    float: left;
-    width: calc(50% - 10px);
-}
-
+#input_email,
 #input_name {
     margin-right: 20px;
+    width: 100%;
 }
 
 #input_subject {
@@ -449,7 +447,7 @@ form {
     }
     
     .center_small {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 10px;
         letter-spacing: 0.05em;
     }
