@@ -474,5 +474,8 @@ form {
         overflow-x: scroll;
     }
     
-
+    html {
+     
+        animation: none;
+    }
 }
