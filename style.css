@@ -422,7 +422,7 @@ form {
 
     .logo {
 
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     h1 {
@@ -459,5 +459,8 @@ form {
         letter-spacing: 0.11em;
         text-transform: uppercase;
         cursor: pointer;
+    }
+    #center_text {
+       min-height: 400px;
     }
 }
