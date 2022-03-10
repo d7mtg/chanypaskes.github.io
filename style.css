@@ -414,7 +414,7 @@ form {
 
 .submit_lottie {
     position: absolute;
-    bottom: 35px;
+    bottom: 35px;   
     right: 0px;
     left: 0px;
     margin: auto;
@@ -506,7 +506,8 @@ form {
         overflow-x: scroll;
     }
     .submit_lottie{
-        bottom: 50px;
+        position: relative;
+        bottom: 70px;
     }
     html {
      

@@ -31,11 +31,18 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
+            
             document.getElementById('contact_form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 document.getElementById('popup_button').value = '';
                 //select .submit_lottie
                 document.querySelector('.submit_lottie').style.display = 'block';
+                document.getElementById('popup_button').style.backgroundColor = '#EB5C27';
+                //disable button
+                document.getElementById('popup_button').disabled = true;
+                document.getElementById('popup_button').style.cursor = 'not-allowed';
+
+
 
                 emailjs.sendForm("service_ihct12f","template_ptodhqn", this)
                     .then(function() {
@@ -46,6 +53,7 @@
                         document.getElementById('input_subject').value = '';
                         document.getElementById('input_message').value = '';
                         document.getElementById('popup_button').value = 'THANKS FOR STRIKING THE MATCH. TALK SOON.';
+
                         
 
                     }, function(error) {
@@ -110,7 +118,7 @@
                 <textarea placeholder="Here's where you spill your guts." name="message" class="popup_input popup_textarea"
                     id="input_message"></textarea>
                 <input class="popup_button" type="submit" value="Send" id="popup_button">
-                <lottie-player class="submit_lottie" src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
+                <lottie-player class="submit_lottie" src="https://assets9.lottiefiles.com/packages/lf20_ean9shke.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
 
             </form>
         </div>
@@ -179,12 +187,14 @@
             document.getElementById('popup_container').classList.remove('hidden');
             document.getElementById('popup_container').classList.add('visible');
             document.getElementById('dark_overlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
 
         function closepopup() {
             document.getElementById('popup_container').classList.remove('visible');
             document.getElementById('popup_container').classList.add('hidden');
             document.getElementById('dark_overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     </script>
 
