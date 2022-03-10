@@ -163,7 +163,6 @@ h1 {
 
 ::selection {
     background: #f5f5f53c;
-    color: #000;
 }
 
 lottie-player {
@@ -189,10 +188,11 @@ lottie-player {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 7.93651px 10.8225px 5.77201px #060606;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     display: block;
     opacity: 1;
     animation: reveal 0.5s ease-in-out forwards;
+
 
 }
 
@@ -265,7 +265,7 @@ lottie-player {
     border-radius: 10px 10px 0px 0px;
     padding-left: 35px;
     padding-right: 35px;
-
+    box-shadow:  rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
 }
 
@@ -329,25 +329,33 @@ form {
 
 .popup_input {
     margin-bottom: 20px;
-    border: 1px solid #B5B5B5;
+    border: 1px solid #9A9A9A;
     outline: none;
     height: 35px;
-    background: #383838;
+    background: #282727;
     font-family: 'BN Bergen St';
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.23em;
-    color: #9A9A9A;
+    color: white;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
     line-height: 25px;
+    
+}
+::placeholder {
+    color: #9A9A9A;
+
 }
 
+
+  
 .popup_input:focus {
     border: 1px solid #EB5C27;
+
 }
 
 #input_name,
@@ -414,6 +422,8 @@ form {
 .popup_button:hover {
     background: #EB5C27;
     border: 1px solid #EB5C27;
+    /* outer shadow */
+    
 }
 
 /* screens 600 */
@@ -470,7 +480,7 @@ form {
     }
     .popup_body{
         width: calc(100% - 80px);
-        height: 500px;
+        max-height: 80vh;
         overflow-x: scroll;
     }
     
