@@ -196,7 +196,7 @@ lottie-player {
 
 }
 
-.hidden{
+.hidden {
     position: fixed;
     width: 550px;
     max-width: 90%;
@@ -209,9 +209,9 @@ lottie-player {
     transform: translate(-50%, -50%);
     box-shadow: 0px 7.93651px 10.8225px 5.77201px #060606;
     animation: hideAnim 3s ease forwards;
-display: none;    
-  
-   
+    display: none;
+
+
 }
 
 
@@ -226,21 +226,21 @@ display: none;
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
-    
+
 }
 
 
 
-    
 
 
-#dark_overlay{
+
+#dark_overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     display: none;
     animation: revealbackground 0.5s ease-in-out;
 
@@ -254,8 +254,8 @@ display: none;
     100% {
         opacity: 1;
     }
-    
-    
+
+
 }
 
 .popup_header {
@@ -415,17 +415,34 @@ form {
     background: #EB5C27;
     border: 1px solid #EB5C27;
 }
+
 /* screens 600 */
 @media screen and (max-width: 800px) {
+    /*move  logo a bit down */
+
+    .logo {
+
+        padding-top: 100px;
+    }
+
     h1 {
-        font-family: 'Roobert';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 120px;
+        padding-top: 75px;
+        font-size: 90px;
         line-height: 71.5%;
         text-align: center;
     }
-
+    .center_large {
+        font-size: 24px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        line-height: 25px;
+    }
+    
+    .center_small {
+        font-size: 14px;
+        margin-bottom: 10px;
+        letter-spacing: 0.05em;
+    }
     .wide_button {
         background: url(large-button.svg) no-repeat;
         background-size: 100% 100%;
@@ -435,24 +452,12 @@ form {
         font-family: 'BN Bergen St';
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
+        font-size: 8px;
         line-height: 151.5%;
         color: #FFFFFF;
         text-align: center;
         letter-spacing: 0.11em;
         text-transform: uppercase;
-       cursor: pointer;
+        cursor: pointer;
     }
-}
-@media screen and (max-width: 500px) {
-    h1 {
-        font-family: 'Roobert';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 90px;
-        line-height: 71.5%;
-        text-align: center;
-    }
-
-
 }
