@@ -77,7 +77,7 @@
     <button class="wide_button" onclick="openpopup()"> That's why you're gonna click this now.</button>
     <div class="footer">
         <img class="logo_footer" src="widelogo.png" alt="">
-        <p class="footer_text">COPYRIGHT 2022 • CHANY PASKES COPY </p>
+        <p class="footer_text">COPYRIGHT <span id="year"></span> • CHANY PASKES COPY </p>
     </div>
 
     <div class="popup_container hidden" id="popup_container">
@@ -92,15 +92,16 @@
             <p class="popup_body_text">
                 The real reason my website is still in the works (okay not yet in the works) is that I'm fueling the
                 fire for my clients in the form of sizzling copy. <br> <br>
-                Agreed, the fire metaphor thing's getting kinda old. Burnt.<br> <br>
-                So, you ready to fire it up? Give a holler. <br> <br>
+                Agreed, the fire metaphor thing's getting kinda old. Burnt.<br> <br><br>
+                <span class="thinline"></span>
+               <span class="popup_body_text_large"> So, you ready to fire it up? Give a holler. </span><br> <br>
                 <span class="popup_body_text_small"> A whisper works too.</span>
             </p>
             <form id="contact_form" action="">
                 <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name" required>
                 <input placeholder="Best place to spam you? (nah...)" type="email" name="reply_to" class="popup_input" id="input_email" required>
                 <input placeholder="What brings you?" type="text" name="subject" class="popup_input" id="input_subject">
-                <textarea placeholder="Here's where to spill your guts." name="message" class="popup_input popup_textarea"
+                <textarea placeholder="Here's where you spill your guts." name="message" class="popup_input popup_textarea"
                     id="input_message"></textarea>
                 <input class="popup_button" type="submit" value="Send" id="popup_button">
                 <lottie-player class="submit_lottie" src="https://assets5.lottiefiles.com/private_files/lf30_pgnh2t8s.json" background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
@@ -110,6 +111,11 @@
     </div>
     <div id="dark_overlay"></div>
     <script>
+
+        var d = new Date();
+        var n = d.getFullYear();
+        document.getElementById("year").innerHTML = n;
+
         var center_text = document.getElementById('center_text');
         var typewriter = new Typewriter(center_text, {
             delay: 35,

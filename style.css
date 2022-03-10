@@ -74,10 +74,9 @@ h1 {
     letter-spacing: 0.05em;
 }
 
-.line {}
 
 .admit_it {
-    padding-top: 50px;
+    padding-top: 150px;
     font-family: 'Roobert';
     font-style: normal;
     font-weight: normal;
@@ -136,7 +135,9 @@ h1 {
 
 .footer {
     width: 100%;
-    margin-top: 100px;
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 
 }
 
@@ -314,16 +315,28 @@ lottie-player {
     line-height: 104.5%;
     letter-spacing: 0.03em;
     color: #9A9A9A;
-    border-bottom: 1px solid #4E4E4E;
+    border-bottom: 1px solid #4e4e4ea9;
     padding-bottom: 25px;
     margin-bottom: 25px;
     padding-top: 25px;
 }
 
-.popup_body_text_small {
-    font-size: 10px;
+.thinline{
+    border-top: 1px solid #4e4e4ea9;
+    height: 25px;
+    width: 100%;
+    display: block;
+
 }
 
+.popup_body_text_small {
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    
+}
+.popup_body_text_large{
+    font-size: 18px;
+}
 form {
     overflow: hidden;
 }
