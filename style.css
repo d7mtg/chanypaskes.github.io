@@ -315,7 +315,7 @@ lottie-player {
     font-style: normal;
     font-weight: 100;
     font-size: 14px;
-    line-height: 104.5%;
+    line-height: 120.5%;
     letter-spacing: 0.03em;
     color: #9A9A9A;
     border-bottom: 1px solid #4e4e4ea9;
@@ -443,7 +443,15 @@ form {
 /* screens 600 */
 @media screen and (max-width: 800px) {
     /*move  logo a bit down */
+    .popup_button {
+        height: 80px;
 
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.1em;
+        border-radius: 2px;
+        white-space: normal;
+        }
     .logo {
 
         padding-top: 80px;
@@ -497,7 +505,9 @@ form {
         max-height: 80vh;
         overflow-x: scroll;
     }
-    
+    .submit_lottie{
+        bottom: 50px;
+    }
     html {
      
         animation: none;

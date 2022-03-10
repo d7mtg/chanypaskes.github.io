@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <meta name="theme-color" content="#000000">
     <title>Chany Paskes Copy</title>
     <script src="typewriter.js"></script>
@@ -39,13 +40,18 @@
                 emailjs.sendForm("service_ihct12f","template_ptodhqn", this)
                     .then(function() {
                 document.querySelector('.submit_lottie').style.display = 'none';
-
+//clear all fields id="input_name" id="input_email" id="input_subject"> id="input_message"
+                        document.getElementById('input_name').value = '';
+                        document.getElementById('input_email').value = '';
+                        document.getElementById('input_subject').value = '';
+                        document.getElementById('input_message').value = '';
                         document.getElementById('popup_button').value = 'THANKS FOR STRIKING THE MATCH. TALK SOON.';
+                        
 
                     }, function(error) {
                 document.querySelector('.submit_lottie').style.display = 'none';
 
-                        document.getElementById('popup_button').value = 'Failed. Error. What happened?';
+                        document.getElementById('popup_button').value = 'Error! Please try again.';
 
                     });
             });
