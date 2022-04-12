@@ -510,11 +510,10 @@ text-indent: 5px;
     #input_email,
     #input_subject {
         width: 100%;
-margin-right: 20px;
     }
 
     .popup_body {
-        width: calc(100% - 40px);
+        width: calc(100% - 80px);
         max-height: 80vh;
         overflow-x: scroll;
     }
