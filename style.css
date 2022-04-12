@@ -510,6 +510,7 @@ text-indent: 5px;
     #input_email,
     #input_subject {
         width: 100%;
+margin-right: 20px;
     }
 
     .popup_body {
