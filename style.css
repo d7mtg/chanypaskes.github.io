@@ -293,7 +293,6 @@ lottie-player {
 
 .popup_close_button {
 
-    line-height: 65px;
     display: inline;
     float: right;
     height: 65px;
@@ -361,7 +360,7 @@ form {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
-    line-height: 25px;
+    line-height: 35px;
     transition: all 0.1s ease-in-out;
 
 text-indent: 5px;
@@ -510,18 +509,21 @@ text-indent: 5px;
     #input_email,
     #input_subject {
         width: 100%;
+        height: 40px;
     }
 
     .popup_body {
-        width: calc(100% - 60px);
+        width: calc(100% - 40px);
         max-height: 80vh;
         overflow-x: scroll;
-
-padding-right: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
  
 
     }
 
+   
+    
     .submit_lottie {
         position: relative;
         bottom: 70px;
