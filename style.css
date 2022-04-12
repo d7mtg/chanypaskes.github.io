@@ -364,6 +364,8 @@ form {
     line-height: 25px;
     transition: all 0.1s ease-in-out;
 
+text-indent: 5px;
+
 }
 
 ::placeholder {
@@ -511,7 +513,7 @@ form {
     }
 
     .popup_body {
-        width: calc(100% - 80px);
+        width: calc(100% - 40px);
         max-height: 80vh;
         overflow-x: scroll;
     }
