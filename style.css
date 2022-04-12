@@ -513,7 +513,7 @@ text-indent: 5px;
     }
 
     .popup_body {
-        width: calc(100% - 40px);
+        width: calc(100% - 60px);
         max-height: 80vh;
         overflow-x: scroll;
 
