@@ -1,2 +1,7 @@
-# chanypaskes.github.io
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8c83a2ed-1f79-49f9-a9e1-5a53a898acc5/deploy-status)](https://app.netlify.com/sites/chanypaskes/deploys)
+# Chany Paskes
+
+Static website at https://chanypaskes.com, hosted by the `paskes` Vercel project.
+
+Deploy the `main` branch from the repository root using framework Other, no build command, and output directory `.`.
+
+The contact form uses the existing EmailJS service and template. Failed sends keep the entered details and allow another attempt.
