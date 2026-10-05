@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://chanypaskes.com/" />
     
     <meta name="theme-color" content="#040404">
@@ -83,6 +83,7 @@
 </head>
 
 <body>
+    <main id="page_content">
     <div class="nav">
         <img src="logo.png" alt="Chany Paskes Copy logo" class="logo">
     </div>
@@ -103,19 +104,21 @@
         <span class="bold">Lighting a fire is a thrill.</span>
     </p>
     <p class="all_caps_small">(And not just for little boys.)</p>
-    <button class="wide_button" onclick="openpopup()"> That's why you're gonna click this now.</button>
+    <button type="button" class="wide_button" onclick="openpopup()"> That's why you're gonna click this now.</button>
     <div class="footer">
         <img class="logo_footer" src="widelogo.png" alt="Chany paskes logo">
         <p class="footer_text">COPYRIGHT <span id="year"></span> • CHANY PASKES COPY </p>
     </div>
 
-    <div class="popup_container hidden" id="popup_container">
+    </main>
+
+    <div class="popup_container hidden" id="popup_container" role="dialog" aria-modal="true" aria-labelledby="popup_title" aria-hidden="true">
 
         <div class="popup_header">
-            <p class="popup_header_text">Confession:</p>
-            <span class="popup_close_button" onclick="closepopup()">
-                <i class="fal fa-xmark"></i>
-            </span>
+            <p class="popup_header_text" id="popup_title" tabindex="-1">Confession:</p>
+            <button type="button" class="popup_close_button" aria-label="Close contact form" onclick="closepopup()">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         <div class="popup_body">
             <p class="popup_body_text">
@@ -127,13 +130,13 @@
                 <span class="popup_body_text_small"> A whisper works too.</span>
             </p>
             <form id="contact_form" action="">
-                <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name"
+                <input placeholder="Who are you?" type="text" name="from_name" class="popup_input" id="input_name" aria-label="Name" autocomplete="name"
                     required>
                 <input placeholder="Best place to spam you? (nah...)" type="email" name="reply_to" class="popup_input"
-                    id="input_email" required>
-                <input placeholder="What brings you?" type="text" name="subject" class="popup_input" id="input_subject">
+                    id="input_email" aria-label="Email" autocomplete="email" required>
+                <input placeholder="What brings you?" type="text" name="subject" class="popup_input" id="input_subject" aria-label="Subject">
                 <textarea placeholder="Here's where you spill your guts." name="message"
-                    class="popup_input popup_textarea" id="input_message"></textarea>
+                    class="popup_input popup_textarea" id="input_message" aria-label="Message"></textarea>
                 <input class="popup_button" type="submit" value="Send" id="popup_button">
                 <lottie-player class="submit_lottie" src="d7mtg3dots.json"
                     background="transparent" speed="1" style="width: 30px; height: 30px;" loop autoplay></lottie-player>
@@ -209,18 +212,47 @@
             .typeString('<div class="line line center_small orange" > The burner it\'s on is waaay back. </div>')
             .start();
 
+        var popupTrigger;
+        var previousOverflow;
+
         function openpopup() {
+            popupTrigger = document.activeElement;
+            previousOverflow = document.body.style.overflow;
+            document.getElementById("page_content").inert = true;
+            document.getElementById("popup_container").setAttribute("aria-hidden", "false");
             document.getElementById('popup_container').classList.remove('hidden');
             document.getElementById('popup_container').classList.add('visible');
             document.getElementById('dark_overlay').style.display = 'block';
             document.body.style.overflow = 'hidden';
+            document.getElementById('popup_title').focus({preventScroll: true});
         }
+
+        document.getElementById('popup_container').addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                closepopup();
+            }
+            if (event.key !== 'Tab') return;
+            var controls = this.querySelectorAll('button:not(:disabled), input:not(:disabled), textarea:not(:disabled)');
+            var first = controls[0];
+            var last = controls[controls.length - 1];
+            if (event.shiftKey && (document.activeElement === first || document.activeElement.id === 'popup_title')) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        });
 
         function closepopup() {
             document.getElementById('popup_container').classList.remove('visible');
             document.getElementById('popup_container').classList.add('hidden');
             document.getElementById('dark_overlay').style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = previousOverflow || '';
+            document.getElementById('popup_container').setAttribute('aria-hidden', 'true');
+            document.getElementById('page_content').inert = false;
+            if (popupTrigger) popupTrigger.focus({preventScroll: true});
         }
     </script>
 

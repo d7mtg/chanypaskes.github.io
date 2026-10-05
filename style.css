@@ -292,16 +292,44 @@ lottie-player {
 }
 
 .popup_close_button {
-
-    display: inline;
     float: right;
-    height: 65px;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    margin-right: -14px;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #b3b3b3;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
 
+button:focus-visible,
+.popup_button:focus-visible {
+    outline: 2px solid #EB5C27;
+    outline-offset: 3px;
+}
 
+.popup_container {
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.popup_header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.popup_input {
+    box-sizing: border-box;
+}
+
+.wide_button {
+    max-width: 100%;
 }
 
 .popup_close_button:hover {
@@ -353,9 +381,9 @@ form {
     font-family: 'BN Bergen St';
     font-style: normal;
     font-weight: 400;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.23em;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0.02em;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -447,6 +475,15 @@ text-indent: 5px;
 /* screens 600 */
 @media screen and (max-width: 800px) {
 
+    .popup_input {
+        font-size: 16px;
+    }
+
+    .popup_body_text {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
     /*move  logo a bit down */
     .popup_button {
         height: 80px;
@@ -514,8 +551,7 @@ text-indent: 5px;
 
     .popup_body {
         width: calc(100% - 40px);
-        max-height: 80vh;
-        overflow-x: scroll;
+        overflow: visible;
         padding-right: 20px;
         padding-left: 20px;
  
